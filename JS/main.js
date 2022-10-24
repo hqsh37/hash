@@ -88,11 +88,11 @@ if (!Array.prototype.forEach) {
 var inpMessage = document.querySelector('#message');
 
 $('#message').oninput = function() {
-    // var t1 = performance.now();
-    // var hash = Sha256.hash(this.value);
-    // var t2 = performance.now();
-    // $('#digest').value = hash;
-    // $('#time').value = (t2 - t1).toFixed(3) + 'ms';
+    var t1 = performance.now();
+    var hash = Sha256.hash(this.value)
+    var t2 = performance.now();
+    $('#digest').value = hash;
+    $('#time').value = (t2 - t1).toFixed(3) + 'ms';
 
     var t3 = performance.now();
     var hashMd5 = CryptoJS.MD5(this.value);
