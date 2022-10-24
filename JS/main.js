@@ -89,7 +89,7 @@ var inpMessage = document.querySelector('#message');
 
 $('#message').oninput = function() {
     var t1 = performance.now();
-    var hash = Sha256.hash(this.value)
+    var hash = Sha256.hash(this.value);
     var t2 = performance.now();
     $('#digest').value = hash;
     $('#time').value = (t2 - t1).toFixed(3) + 'ms';
