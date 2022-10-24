@@ -106,6 +106,3 @@ $('#message').oninput = function() {
     $('#digest-sha1').value = hashSha1;
     $('#time-sha1').value = (t6 - t5).toFixed(3) + 'ms';
 };
-$('#message').focus();
-$('#message').select();
-$('#message').oninput();
