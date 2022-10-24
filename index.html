@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- '//cdn.jsdelivr.net/gh/chrisveness/crypto@latest/sha256.js' -->
+    <script>
+    </script>
+    <!-- <script type="module"> /* show source code */ const response = await fetch('//cdn.jsdelivr.net/gh/chrisveness/crypto@latest/sha256.js'); 
+        $('#src-code').textContent = await response.text(); 
+    </script> -->
+
+    <form name="f">
+        <ul>
+            <li>
+                <label class="w-label" for="message">Message</label>
+                <textarea name="message" id="message" class="width-full" rows="4">abc</textarea>
+            </li>
+            <li>
+                <label class="w-label" for="digest">SHA-256</label>
+                <input type="text" name="digest" id="digest" readonly class="width-full">
+                <output class="small grey" id="time"></output>
+            </li>
+            <li>
+                <label class="w-label" for="digest-md5">MD5</label>
+                <input type="text" name="digest-md5" id="digest-md5" readonly class="width-full">
+                <output class="small grey" id="time-md5"></output>
+            </li>
+            <li>
+                <label class="w-label" for="digest-sha1">SHA-1</label>
+                <input type="text" name="digest-sha1" id="digest-sha1" readonly class="width-full">
+                <output class="small grey" id="time-sha1"></output>
+            </li>
+        </ul>
+    </form>
+
+    <script src="./JS/md5.js"></script>
+    <script src="./js/md5s.js"></script>
+    <script src="./js/sha256.js"></script>
+    <script src="./JS/sha1.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>

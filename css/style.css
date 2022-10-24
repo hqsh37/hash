@@ -1,0 +1,52 @@
+* {
+    margin-top: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+label.w-label {
+    margin: 8px 34px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+label {
+    width: 5em;
+    vertical-align: top;
+}
+
+input {
+    max-width: 42em;
+    height: 30px;
+}
+
+textarea {
+    max-width: 42em;
+}
+
+.production span {
+    background-color: #ffff66;
+}
+
+.production a {
+    font-style: italic;
+}
+
+.width-full {
+    width: 70%;
+}
+
+textarea#message {
+    margin-left: 4px;
+}
+
+input#digest-md5 {
+    margin-left: 27px;
+}
+
+input#digest-sha1 {
+    margin-left: 14px;
+}
