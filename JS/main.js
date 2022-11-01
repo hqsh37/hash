@@ -1,4 +1,3 @@
-$ = document.querySelector.bind(document);
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -84,25 +83,3 @@ if (!Array.prototype.forEach) {
         }
     };
 }
-
-var inpMessage = document.querySelector('#message');
-
-$('#message').oninput = function() {
-    // var t1 = performance.now();
-    // var hash = Sha256.hash(this.value)
-    // var t2 = performance.now();
-    // $('#digest').value = hash;
-    // $('#time').value = (t2 - t1).toFixed(3) + 'ms';
-
-    var t3 = performance.now();
-    var hashMd5 = CryptoJS.MD5(this.value);
-    var t4 = performance.now();
-    $('#digest-md5').value = hashMd5;
-    $('#time-md5').value = (t4 - t3).toFixed(3) + 'ms';
-
-    var t5 = performance.now();
-    var hashSha1 = SHA1(this.value);
-    var t6 = performance.now();
-    $('#digest-sha1').value = hashSha1;
-    $('#time-sha1').value = (t6 - t5).toFixed(3) + 'ms';
-};
