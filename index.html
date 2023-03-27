@@ -40,16 +40,20 @@
     </form>
 
     <script>
-        $ = document.querySelector.bind(document);
+       <script>
+        const $ = document.querySelector.bind(document);
         var inpMessage = document.querySelector('#message');
+        console.log("inpMessage");
+        
 
         $('#message').oninput = function() {
             var t1 = performance.now();
-            var hash = sha256Hash(this.value);
-            var hash = Sha256.hash(this.value)
+            var hash = Sha256.hash(this.value);
             var t2 = performance.now();
             $('#digest').value = hash;
             $('#time').value = (t2 - t1).toFixed(3) + 'ms';
+            console.log((t2 - t1).toFixed(3));
+
 
             var t3 = performance.now();
             var hashMd5 = CryptoJS.MD5(this.value);
@@ -63,6 +67,7 @@
             $('#digest-sha1').value = hashSha1;
             $('#time-sha1').value = (t6 - t5).toFixed(3) + 'ms';
         };
+    </script>
     </script>
     <script src="./js/sha256.js"></script>
     <script src="./JS/md5.js"></script>
